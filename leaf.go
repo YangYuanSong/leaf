@@ -35,6 +35,7 @@ func Run(mods ...module.Module) {
 	// console
 	console.Init()
 
+	//捕获ctrl+c结束前台进程 & 程序友好退出
 	// close
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt, os.Kill)

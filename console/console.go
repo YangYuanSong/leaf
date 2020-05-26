@@ -1,3 +1,5 @@
+// 控制台
+// 内部启动一个server监听，通过命令行连接到server,进行控制处理
 package console
 
 import (
@@ -9,9 +11,11 @@ import (
 	"strings"
 )
 
+// 控制台的内部服务器
 var server *network.TCPServer
 
 func Init() {
+	// 确定控制台端口
 	if conf.ConsolePort == 0 {
 		return
 	}
